@@ -21,12 +21,10 @@ namespace Practice_1._1
         {
             for (var i = 0; i < stringToValidate.Length; i++)
             {
-                for (var j = i+1; j < stringToValidate.Length; j++)
+                var indexOf = stringToValidate.IndexOf(stringToValidate[i]);
+                if (indexOf >= 0 && indexOf != i)
                 {
-                    if (stringToValidate[i] == stringToValidate[j])
-                    {
-                        return false;
-                    }
+                    return false;
                 }
             }
             return true;
